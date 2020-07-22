@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<style>
+    html, body {
+        height: 100%;
+    }
+
+    /* display:inline-block으로 그리드 적용 
+    .inline-block .box{
+        display: inline-block;        
+        width: 300px;
+        height: 300px;
+        margin: 5px;        
+        background-color: red;
+        border: 1px solid #111;        
+    }*/
+
+    /* display:flex로 그리드 적용
+     
+
+    */
+    .flex{
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        flex-direction: row-reverse;
+        height: 100%;
+    }    
+    .flex .box{
+        display: flex;
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        font-size: 2em;
+        color: #f1f1f1;
+        justify-content: center;
+        align-items: center;
+        background-color: red;
+        border: 1px solid #111;
+
+    }    
+
+    /* 한줄리뷰 */
+    .review{
+        width: 80%;
+        padding: 3%;
+        margin: 3% auto;
+        font-size: 1.2em;
+        background-color: #f1f1f1;
+        border: 1px solid #ddd;
+        word-break: keep-all;
+    }
+    h3 {
+        margin: 0.2em 0;
+    }
+</style>
+<body>
+    <!-- <div class="inline-block">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div> -->
+
+    <div class="flex">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+        <div class="box">7</div>
+        <div class="box">8</div>
+        <div class="box">9</div>
+        <div class="box">10</div>
+    </div>
+
+    
+
+    <div class="review">
+        flex가 나오기 전, 박스모델의 가로정렬을 위해 inline-block이나 float요소를 통해 레이아웃을 지정했다.<br>
+        inline-block의 경우 자동으로 그리드가 형성되지 못하고 정적이며, float의 경우 다른 박스모델에도 영향을 준다.<br>
+        이에 반해 flex는 유연하고 다른 박스모델에도 영향을 안주기 때문에 반응형이나 모바일웹 환경에서 매우 유용하다.
+        <h2>[부모 영역에 쓰이는 속성값]</h2>
+        <ol>
+            <li>
+                <h3>display : container(자식들의 부모영역)를 정의</h3>
+                <ul>
+                    <li>flex : block 특성의 flex container</li>
+                    <li>flex-inline : lnline 특성의 flex container</li>
+                </ul>                
+            </li>
+            <li>               
+                <h3>justify-content : 축의 방향</h3>               
+            </li>
+            <li>               
+                <h3>align-items : 축의 수직방향</h3>               
+            </li>    
+            <li>               
+                <h3>align-content : *flex-wrap:wrap인 상태에서 가능</h3>               
+            </li>                   
+            <li>               
+                <h3>flex-direction : 배치방향 전환 (default:row)</h3>               
+            </li>      
+            <li>               
+                <h3>flex-wrap : 줄바꿈을 허용할 것인지 결정</h3>               
+            </li>                                   
+        </ol>
+        <h2>[자식 영역에 쓰이는 속성값]</h2>
+        <ol>
+            <li>               
+                <h3>flex-grow : 여백 조정하는 값</h3>               
+            </li>
+            <li>               
+                <h3>flex-basis : 자식의 점유공간을 조절(여백 부여)</h3>               
+            </li>    
+            <li>               
+                <h3>flex-shrink : </h3>               
+            </li>                   
+            <li>               
+                <h3>flex : basis+shrink 축햑형 *숫자로 작성 (신축성 있음)</h3>               
+            </li>      
+            <li>               
+                <h3>align-self : 각각 위치를 조정 (개별로)</h3>               
+            </li>    
+            <li>               
+                <h3>order : 아이템들의 순서 *숫자로 작성</h3>               
+            </li>                                            
+        </ol>        
+    </div>
+</body>
+</html>
