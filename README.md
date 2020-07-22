@@ -1,3 +1,1 @@
-# kakao-clone
- kakao desktop app clone
- 2020-07-17~
+HTML/CSS/JS 각종 테스트 파일입니다.
